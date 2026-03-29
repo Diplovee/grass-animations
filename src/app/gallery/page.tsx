@@ -1,7 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
+
+const GrassMiniPreview = dynamic(() => import('@/components/GrassMiniPreview'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full bg-gradient-to-b from-sky-400 to-green-900 animate-pulse" />
+  ),
+});
 
 const Logo = () => (
   <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -78,22 +86,8 @@ const animations = [
 
 function PreviewGrass3D() {
   return (
-    <div className="relative w-full h-full overflow-hidden bg-gradient-to-b from-sky-400 to-sky-600">
-      <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-green-900 to-green-800" />
-      {[...Array(14)].map((_, i) => (
-        <div key={i} className="absolute bottom-8 origin-bottom"
-          style={{
-            left: `${6 + i * 7}%`,
-            height: `${40 + Math.sin(i * 1.7) * 20}px`,
-            width: '3px',
-            background: `linear-gradient(to top, #166534, #4ade80)`,
-            borderRadius: '2px',
-            animation: `sway ${1.8 + (i % 3) * 0.4}s ease-in-out infinite`,
-            animationDelay: `${i * 0.12}s`,
-            transformOrigin: 'bottom center',
-          }}
-        />
-      ))}
+    <div className="w-full h-full">
+      <GrassMiniPreview />
     </div>
   );
 }
@@ -268,7 +262,7 @@ export default function GalleryPage() {
               }`}
             >
               {/* Preview */}
-              <div className="relative h-44 overflow-hidden">
+              <div className="relative h-44 overflow-hidden pointer-events-none">
                 <Preview />
                 <span className={`absolute top-3 right-3 text-xs px-2 py-0.5 rounded-full border font-medium ${categoryColors[anim.category]}`}>
                   {anim.category}
