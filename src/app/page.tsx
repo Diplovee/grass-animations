@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import GrassCanvas from '@/components/GrassCanvas';
 
 export default function Home() {
@@ -55,9 +56,9 @@ export default function Home() {
 
         {/* Nav links */}
         <div className="hidden sm:flex items-center gap-7 text-sm text-zinc-400">
-          <a href="#" className="text-white font-medium">3D</a>
-          <a href="#" className="hover:text-white transition-colors duration-150">Flat</a>
-          <a href="#" className="hover:text-white transition-colors duration-150">Gallery</a>
+          <span className="text-white font-medium">3D</span>
+          <Link href="/gallery/flat-grass" className="hover:text-white transition-colors duration-150">Flat</Link>
+          <Link href="/gallery" className="hover:text-white transition-colors duration-150">Gallery</Link>
           <a href="#" className="hover:text-white transition-colors duration-150">About</a>
         </div>
       </nav>
