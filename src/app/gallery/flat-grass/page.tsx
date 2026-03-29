@@ -33,7 +33,7 @@ export default function FlatGrassPage() {
         </Link>
         <div className="hidden sm:flex items-center gap-7 text-sm text-white/70">
           <Link href="/" className="hover:text-white transition-colors">3D</Link>
-          <span className="text-white font-medium">Flat</span>
+          
           <Link href="/gallery" className="hover:text-white transition-colors">Gallery</Link>
         </div>
       </nav>

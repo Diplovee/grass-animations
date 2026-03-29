@@ -29,7 +29,6 @@ export default function SnowPage() {
         </Link>
         <div className="hidden sm:flex items-center gap-7 text-sm text-white/40">
           <Link href="/" className="hover:text-white transition-colors">3D</Link>
-          <Link href="/gallery/flat-grass" className="hover:text-white transition-colors">Flat</Link>
           <Link href="/gallery" className="hover:text-white transition-colors">Gallery</Link>
         </div>
       </nav>
