@@ -32,7 +32,6 @@ export default function FlatGrassPage() {
           <span className="text-white font-semibold text-base tracking-tight drop-shadow">Grass Animations</span>
         </Link>
         <div className="hidden sm:flex items-center gap-7 text-sm text-white/70">
-          <Link href="/" className="hover:text-white transition-colors">3D</Link>
           
           <Link href="/gallery" className="hover:text-white transition-colors">Gallery</Link>
         </div>

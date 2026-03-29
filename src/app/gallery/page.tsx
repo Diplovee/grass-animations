@@ -28,7 +28,7 @@ const animations = [
     description: '7 000 instanced blades with GLSL wind shaders and real-time per-blade bending',
     tags: ['3D', 'WebGL', 'GLSL'],
     category: '3D' as Category,
-    href: '/',
+    href: '/gallery/grass-3d',
     ready: true,
     preview: 'grass',
   },
@@ -216,7 +216,6 @@ export default function GalleryPage() {
           <span className="font-semibold text-base tracking-tight text-white">Grass Animations</span>
         </Link>
         <div className="hidden sm:flex items-center gap-7 text-sm text-zinc-400">
-          <Link href="/" className="hover:text-white transition-colors">3D</Link>
           <span className="text-white font-medium">Gallery</span>
           <a href="#" className="hover:text-white transition-colors">About</a>
         </div>

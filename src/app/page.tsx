@@ -56,7 +56,6 @@ export default function Home() {
 
         {/* Nav links */}
         <div className="hidden sm:flex items-center gap-7 text-sm text-zinc-400">
-          <span className="text-white font-medium">3D</span>
           <Link href="/gallery" className="hover:text-white transition-colors duration-150">Gallery</Link>
           <a href="#" className="hover:text-white transition-colors duration-150">About</a>
         </div>
